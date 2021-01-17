@@ -1,0 +1,17 @@
+Solution :-
+
+function evenNumbers(N) {
+
+    var ans = [];
+
+    for(var i=0; i<=N; i++) {
+
+        if(i%2 == 0) {
+            ans.push(i);
+        }
+    }
+
+    return ans;
+}
+module.exports = evenNumbers;
+evenNumbers();
