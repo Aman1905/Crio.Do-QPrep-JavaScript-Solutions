@@ -1,2 +1,18 @@
 Solution :-
 
+async function getCommentsByUserId(userId) {
+
+    let response = await fetch('/api/comments');
+    let data = await response.json()
+
+    let arr = [] 
+    
+    for(let i=0; i<data.length; i++) {
+        if(data[i].userId == userId) {
+            arr.push(data[i].data)
+        }
+    }
+
+    return arr
+}
+module.exports = getCommentsByUserId;
